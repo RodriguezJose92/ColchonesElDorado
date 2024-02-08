@@ -567,7 +567,7 @@ iframe {
 
     .tooltip {
         position: absolute;
-        top: -90%;
+        top: -65%;
         width: 280px;
         background-color: rgb(234, 234, 234);
         padding: 0px 15px;
@@ -588,6 +588,7 @@ iframe {
         flex-direction: row;
         justify-content: center;
         align-items: center;
+        margin-bottom: 15px;
     }
 
     .btnMudi3D,

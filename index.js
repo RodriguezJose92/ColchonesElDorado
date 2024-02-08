@@ -32,7 +32,7 @@ async function serverData({
     const link = document.createElement('LINK');
     link.setAttribute('rel', 'stylesheet');
     link.id = "stylesMudiGeneral";
-    link.href = `http://127.0.0.1:5500/ColchonesElDorado/index.css`; /* Pueden tomarlos de esta ruta */
+    link.href = `https://cdn.jsdelivr.net/gh/RodriguezJose92/ColchonesElDorado@latest/index.css`; /* Pueden tomarlos de esta ruta */
   
     document.head.appendChild(link)
   };
