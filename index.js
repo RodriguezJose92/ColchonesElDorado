@@ -32,7 +32,8 @@ async function serverData({
     const link = document.createElement('LINK');
     link.setAttribute('rel', 'stylesheet');
     link.id = "stylesMudiGeneral";
-    link.href = `https://cdn.jsdelivr.net/gh/RodriguezJose92/ColchonesElDorado@latest/index.css`; /* Pueden tomarlos de esta ruta */
+    // link.href = `https://cdn.jsdelivr.net/gh/RodriguezJose92/ColchonesElDorado@latest/index.css`; /* Pueden tomarlos de esta ruta */
+    link.href = `http://127.0.0.1:5500/index.css`; /* Pueden tomarlos de esta ruta */
   
     document.head.appendChild(link)
   };
@@ -50,8 +51,8 @@ async function serverData({
       <div class="tooltip showTooltipInit">
         <p><b>¡Nuevo!</b> prueba nuestras experiencias de 3D y Realidad Aumentada</p>
       </div>
-      <img src="https://mudi.com.co/cliente/${idCompany}/btn3D.webp" alt="Boton Mudi para activar 3D" class="btnMudi3D" id="btnMudi3D" sku=${sku} title="Haz click para tener una experiencia 3D">
-      <img src="https://mudi.com.co/cliente/${idCompany}/btnAR.webp" alt="Boton Mudi para activar AR" class="btnMudiAR" id="btnMudiAR" sku=${sku} title="Haz click para tener una experiencia de realidad aumentada">`;
+      <img src="https://cdn.jsdelivr.net/gh/RodriguezJose92/ColchonesElDorado@latest/assets/btn3D.webp" alt="Boton Mudi para activar 3D" class="btnMudi3D" id="btnMudi3D" sku=${sku} title="Haz click para tener una experiencia 3D">
+      <img src="https://cdn.jsdelivr.net/gh/RodriguezJose92/ColchonesElDorado@latest/assets/btnAR.webp" alt="Boton Mudi para activar AR" class="btnMudiAR" id="btnMudiAR" sku=${sku} title="Haz click para tener una experiencia de realidad aumentada">`;
   
     containerPrincipalBtns.querySelector('.btnMudi3D').addEventListener('click', () => { createModal3D({ link3D: link3D, color: color, zModal: zModal }) }, false);
     containerPrincipalBtns.querySelector('.btnMudiAR').addEventListener('click', () => { createModalAR({ color: color, idCompany: idCompany, sku: sku, zModal: zModal }) }, false);
@@ -106,7 +107,7 @@ async function serverData({
                 <div class="fristContentMudi">
     
                     <div class="containerMudiSteps">
-                        <img class="imgStepMudi" src="https://mudi.com.co/cliente/${idCompany}/step1.webp">
+                        <img class="imgStepMudi" src="https://cdn.jsdelivr.net/gh/RodriguezJose92/ColchonesElDorado@latest/assets/step1.webp">
                         <div class="containerStepsText">
                             <h3 class="stepTitleMudi">Apunta tu teléfono al piso para ver el producto.</h3>
                             <p class="stepParagrahpMudi">Prueba otro espacio si no puedes ver el producto.</p>
@@ -114,7 +115,7 @@ async function serverData({
                     </div>
     
                     <div class="containerMudiSteps">
-                        <img class="imgStepMudi" src="https://mudi.com.co/cliente/${idCompany}/step2.webp">
+                        <img class="imgStepMudi" src="https://cdn.jsdelivr.net/gh/RodriguezJose92/ColchonesElDorado@latest/assets/step2.webp">
                         <div class="containerStepsText">
                             <h3 class="stepTitleMudi">Desplaza para visualizar.</h3>
                             <p class="stepParagrahpMudi">Mueve tu dedo en la pantalla para rotar la imagen.</p>
@@ -122,7 +123,7 @@ async function serverData({
                     </div>
     
                     <div class="containerMudiSteps">
-                        <img class="imgStepMudi" src="https://mudi.com.co/cliente/${idCompany}/step3.webp">
+                        <img class="imgStepMudi" src="https://cdn.jsdelivr.net/gh/RodriguezJose92/ColchonesElDorado@latest/assets/step3.webp">
                         <div class="containerStepsText">
                             <h3 class="stepTitleMudi">Amplia y detalla el producto.</h3>
                             <p class="stepParagrahpMudi">Controla el zoom arrastrando dos dedos en la pantalla de adentro hacia afuera.</p>
@@ -130,7 +131,7 @@ async function serverData({
                     </div>
     
                     <div class="containerMudiSteps">
-                        <img class="imgStepMudi" src="https://mudi.com.co/cliente/${idCompany}/step4.webp">
+                        <img class="imgStepMudi" src="https://cdn.jsdelivr.net/gh/RodriguezJose92/ColchonesElDorado@latest/assets/step4.webp">
                         <div class="containerStepsText">
                             <h3 class="stepTitleMudi">Toca dos veces para restablecer.</h3>
                             <p class="stepParagrahpMudi">Vuelve al tamaño original haciendo doble click sobre el producto.</p>
