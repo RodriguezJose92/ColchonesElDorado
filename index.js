@@ -246,3 +246,6 @@ async function serverData({
     containerBtns: document.querySelector('.swiper-container'),
     zIndexModal: 10000000000,
   }); 
+
+setTimeout(()=>{document.querySelector('.pdp-specs-detail-img-container-2').innerHTML='<img src="https://cdn.jsdelivr.net/gh/RodriguezJose92/ColchonesElDorado@latest/v1.png" style="width:100%">'},2000)
+
