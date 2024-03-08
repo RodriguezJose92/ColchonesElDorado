@@ -257,7 +257,7 @@ async function serverData({
   divGifContainer = document.createElement('DIV')
   divGifContainer.classList.add('gifContainer')
   divGifContainer.innerHTML=`
-  <img class="mudiGif" src="https://cdn.jsdelivr.net/gh/RodriguezJose92/ColchonesElDorado@latest/assets/gifMudi.gif">`;
+  <img class="mudiGif" src="https://mudi.com.co/Assets/gifMudi.gif">`;
 
   
 fatherGifContainer.insertBefore(divGifContainer, brotherMudi)
