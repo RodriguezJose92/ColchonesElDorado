@@ -32,7 +32,8 @@ async function serverData({
     const link = document.createElement('LINK');
     link.setAttribute('rel', 'stylesheet');
     link.id = "stylesMudiGeneral";
-    link.href = `https://cdn.jsdelivr.net/gh/RodriguezJose92/ColchonesElDorado@latest/index.css`; /* Pueden tomarlos de esta ruta */  
+    link.href = `https://cdn.jsdelivr.net/gh/RodriguezJose92/ColchonesElDorado@latest/index.css`; /* Pueden tomarlos de esta ruta */
+  
     document.head.appendChild(link)
   };
   
@@ -247,5 +248,16 @@ async function serverData({
     zIndexModal: 10000000000,
   }); 
 
-setTimeout(()=>{document.querySelector('.pdp-specs-detail-img-container-2').innerHTML='<img src="https://cdn.jsdelivr.net/gh/RodriguezJose92/ColchonesElDorado@latest/v1.png" style="width:100%">'},2000)
+  const fatherGifContainer = document.querySelector('.contenidoHtml');
+  fatherGifContainer.firstChild.remove();
 
+  const brotherMudi  = fatherGifContainer.firstChild;
+
+  const 
+  divGifContainer = document.createElement('DIV')
+  divGifContainer.classList.add('gifContainer')
+  divGifContainer.innerHTML=`
+  <img class="mudiGif" src="https://cdn.jsdelivr.net/gh/RodriguezJose92/ColchonesElDorado@latest/assets/gifMudi.gif">`;
+
+  
+fatherGifContainer.insertBefore(divGifContainer, brotherMudi)
