@@ -248,6 +248,7 @@ async function serverData({
     zIndexModal: 10000000000,
   }); 
 
+setTimeout(()=>{
   const fatherGifContainer = document.querySelector('.contenidoHtml');
   fatherGifContainer.firstChild.remove();
 
@@ -261,3 +262,6 @@ async function serverData({
 
   
 fatherGifContainer.insertBefore(divGifContainer, brotherMudi)
+},5000)
+
+
