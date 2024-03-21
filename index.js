@@ -181,18 +181,7 @@ async function serverData({
       valorMudi: 1,
       sku: sku,
       sistemaOperativo: OSdevice
-    });
-  
-    /** Evento de intención de compra */
-    document.querySelector('.buy-in-page-button').addEventListener('click', () => {
-      dataLayer.push({
-        event: 'Evento de intención de compra Mudi',
-        valorMudi: 1,
-        sku: sku,
-        sistemaOperativo: OSdevice
-      })
-    }, false);
-  
+    });  
   
     /** Evento de interación AR Mudi */
     document.getElementById('btnMudiAR').addEventListener('click', () => {
@@ -208,6 +197,30 @@ async function serverData({
     document.getElementById('btnMudi3D').addEventListener('click', () => {
       dataLayer.push({
         event: 'Evento de interacción 3D Mudi',
+        valorMudi: 1,
+        sku: sku,
+        sistemaOperativo: OSdevice
+      })
+    }, false);
+
+    /** Evento de intención de compra */
+
+    let 
+    addTocar    = document.body.querySelectorAll('.vtex-add-to-cart-button-0-x-buttonText')[0].parentNode.parentNode.parentNode,
+    endBuy      = document.body.querySelectorAll('.vtex-add-to-cart-button-0-x-buttonText')[1].parentNode.parentNode.parentNode;
+
+    addTocar.addEventListener('click', () => {
+      dataLayer.push({
+        event: 'Evento de intención de compra Mudi.',
+        valorMudi: 1,
+        sku: sku,
+        sistemaOperativo: OSdevice
+      })
+    }, false);
+
+    endBuy.addEventListener('click', () => {
+      dataLayer.push({
+        event: 'Evento de ir al checkout Mudi.',
         valorMudi: 1,
         sku: sku,
         sistemaOperativo: OSdevice
