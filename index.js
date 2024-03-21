@@ -238,10 +238,12 @@ async function serverData({
     createBtns({ father: containerBtns, sku: skuNumber, idCompany: idCompanyMudi, link3D: server.URL_WEB, color: color, zBtns: zIndexBtns, zModal: zIndexModal, ButtonsY: positionBtnsY });
     sendDataLayer({ sku: skuNumber })
   };
+
+
   
   MudiExperience({
     tokenApi: 'YeUtus8tzSGikyhV9pok',
-    skuNumber: 'pruebaelDorado',
+    skuNumber: new URLSearchParams(window.location.search).get('skuId'),
     idCompanyMudi: 403,
     color: '#78bed5',
     containerBtns: document.querySelector('.swiper-container'),
