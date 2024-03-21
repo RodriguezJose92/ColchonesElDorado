@@ -900,3 +900,7 @@ iframe {
         transform: translateX(0%);
     }
 }
+
+.colchoneseldorado-customproducto-xtg-0-x-flagCustomContainer-pdp {
+    display: none !important;
+}
