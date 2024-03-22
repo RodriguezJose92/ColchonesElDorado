@@ -1,4 +1,6 @@
 /* Petición SeverMudi */
+let responseServerMudi = null;
+
 async function serverData({
     token = undefined,
     sku = undefined
@@ -22,6 +24,7 @@ async function serverData({
   
     const jsonResponse = await req.json();
     const finalResponse = jsonResponse.data[0];
+    responseServerMudi = finalResponse;
   
     return finalResponse;
   
@@ -252,8 +255,6 @@ async function serverData({
     sendDataLayer({ sku: skuNumber })
   };
 
-
-  
   MudiExperience({
     tokenApi: 'YeUtus8tzSGikyhV9pok',
     skuNumber: new URLSearchParams(window.location.search).get('skuId'),
@@ -263,20 +264,45 @@ async function serverData({
     zIndexModal: 10000000000,
   }); 
 
+
 setTimeout(()=>{
+
+  /** Navegador de la experiencia */
+  let OSdevice;
+  
+  if (navigator.userAgent.includes('Android')) OSdevice = 'Android';
+  else if (navigator.userAgent.includes('iPhone') || navigator.userAgent.includes('iPad')) OSdevice = "IOS";
+  else OSdevice = 'DESK';
+
+  /** Contenedores padres  */
   const fatherGifContainer = document.querySelector('.contenidoHtml');
   fatherGifContainer.firstChild.remove();
 
   const brotherMudi  = fatherGifContainer.firstChild;
 
+  /** Creamos el GIf */
   const 
   divGifContainer = document.createElement('DIV')
   divGifContainer.classList.add('gifContainer')
   divGifContainer.innerHTML=`
   <img class="mudiGif" src="https://mudi.com.co/Assets/gifMudi.gif">`;
 
-  
-fatherGifContainer.insertBefore(divGifContainer, brotherMudi)
+  /** Agregamos funcuiobalidad de modal 3D  */
+  divGifContainer.addEventListener('click',()=> createModal3D({link3D:responseServerMudi.URL_WEB,color:'#78bed5',zModal: 10000000000}) );
+
+  /** Evento de interación 3D Mudi GIF */
+  divGifContainer.addEventListener('click', () => {
+    dataLayer.push({
+      event: 'Evento de interaccion 3D Mudi Gif',
+      valorMudi: 1,
+      sku: new URLSearchParams(window.location.search).get('skuId'),
+      sistemaOperativo: OSdevice
+    })
+  }, false);
+
+  /** renderización en el DOM */  
+  fatherGifContainer.insertBefore(divGifContainer, brotherMudi);
+
 },5000)
 
 
