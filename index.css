@@ -901,6 +901,10 @@ iframe {
     }
 }
 
+.mudiGif {
+    border-radius: 10px;
+}
+
 .colchoneseldorado-customproducto-xtg-0-x-flagCustomContainer-pdp {
     display: none !important;
 }
