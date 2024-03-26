@@ -249,7 +249,25 @@ async function serverData({
     /** Una vez tengamos la respuesta positiva creamos los estilos generales y los botones */
     createStyles({ idCompany: idCompanyMudi });
     createBtns({ father: containerBtns, sku: skuNumber, idCompany: idCompanyMudi, link3D: server.URL_WEB, color: color, zBtns: zIndexBtns, zModal: zIndexModal, ButtonsY: positionBtnsY });
-    sendDataLayer({ sku: skuNumber })
+    sendDataLayer({ sku: skuNumber });
+    
+    setTimeout(()=>{
+      const fatherGifContainer = document.querySelector('.contenidoHtml');
+      fatherGifContainer.firstChild.remove();
+    
+      const brotherMudi  = fatherGifContainer.firstChild;
+    
+      const 
+      divGifContainer = document.createElement('DIV')
+      divGifContainer.classList.add('gifContainer')
+      divGifContainer.innerHTML=`
+      <img class="mudiGif" src="https://mudi.com.co/Assets/gifMudi.gif">`;
+    
+      
+    fatherGifContainer.insertBefore(divGifContainer, brotherMudi)
+    },5000)
+
+
   };
 
 
@@ -263,20 +281,6 @@ async function serverData({
     zIndexModal: 10000000000,
   }); 
 
-setTimeout(()=>{
-  const fatherGifContainer = document.querySelector('.contenidoHtml');
-  fatherGifContainer.firstChild.remove();
 
-  const brotherMudi  = fatherGifContainer.firstChild;
-
-  const 
-  divGifContainer = document.createElement('DIV')
-  divGifContainer.classList.add('gifContainer')
-  divGifContainer.innerHTML=`
-  <img class="mudiGif" src="https://mudi.com.co/Assets/gifMudi.gif">`;
-
-  
-fatherGifContainer.insertBefore(divGifContainer, brotherMudi)
-},5000)
 
 
