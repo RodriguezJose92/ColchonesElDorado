@@ -264,7 +264,7 @@ async function serverData({
       <img class="mudiGif" src="https://mudi.com.co/Assets/gifMudi.gif">`;
     
       
-    fatherGifContainer.insertBefore(divGifContainer, brotherMudi)
+      //fatherGifContainer.insertBefore(divGifContainer, brotherMudi)
     },5000)
 
 
