@@ -29,16 +29,24 @@ async function serverData({
   
   /** Creamos Los estilos remotos */
   function createStyles({ idCompany }) {
-    const link = document.createElement('LINK');
+
+    if( !document.body.querySelector('#stylesMudiGeneral') ) return;
+
+    const 
+    link = document.createElement('LINK');
     link.setAttribute('rel', 'stylesheet');
     link.id = "stylesMudiGeneral";
     link.href = `https://cdn.jsdelivr.net/gh/RodriguezJose92/ColchonesElDorado@latest/index.css`; /* Pueden tomarlos de esta ruta */
-  
-    document.head.appendChild(link)
+    document.head.appendChild(link);
+
   };
   
   /** Cuando se obtiene una respuesta positiva del server se crean dos botones ( btn3D y btnAR ) */
   function createBtns({ father, sku, idCompany, link3D, color, zBtns, zModal, ButtonsY }) {
+
+    if( !document.body.querySelector('#containerBtnsMudi')){ 
+      document.body.querySelector('#containerBtnsMudi').remove()
+    };
   
     // Creación del contenedor principal para los botones
     const containerPrincipalBtns = document.createElement('DIV');
@@ -269,9 +277,7 @@ async function serverData({
 
 
   };
-
-
-  
+ 
   MudiExperience({
     tokenApi: 'YeUtus8tzSGikyhV9pok',
     skuNumber: new URLSearchParams(window.location.search).get('skuId'),
@@ -281,6 +287,19 @@ async function serverData({
     zIndexModal: 10000000000,
   }); 
 
+document.body.querySelector("[name='product-summary-sku-selector']").addEventListener('input',(e)=>{
 
+  setTimeout(()=>{
+    MudiExperience({
+      tokenApi: 'YeUtus8tzSGikyhV9pok',
+      skuNumber: new URLSearchParams(window.location.search).get('skuId'),
+      idCompanyMudi: 403,
+      color: '#78bed5',
+      containerBtns: document.querySelector('.swiper-container'),
+      zIndexModal: 10000000000,
+    }); 
+  },100);
+  
+});
 
 
