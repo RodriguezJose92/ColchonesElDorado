@@ -1,5 +1,3 @@
-
-
 /* Petición SeverMudi */
 async function serverData({
     token = undefined,
@@ -243,14 +241,6 @@ async function serverData({
   
     const server = await serverData({ token: tokenApi, sku: skuNumber });
     if (server == undefined) { console.warn(`El producto identificado con el SKU: "%c${skuNumber}%c" en Mudi 3D&AR Commerce, no tiene 3D ni AR`, 'color: red; font-weight: bold', 'color: black;'); return };
-  
-    /** Evento de visualización */
-    dataLayer.push({
-      event: 'Evento de visualizacion Mudi',
-      valorMudi: 1,
-      sku: sku,
-      sistemaOperativo: OSdevice
-    });  
 
 
     /** Una vez tengamos la respuesta positiva creamos los estilos generales y los botones */
@@ -260,20 +250,22 @@ async function serverData({
     
     setTimeout(()=>{
       const fatherGifContainer = document.querySelector('.contenidoHtml');
-      fatherGifContainer.firstChild.remove();
-    
-      const brotherMudi  = fatherGifContainer.firstChild;
-    
-      const 
-      divGifContainer = document.createElement('DIV')
-      divGifContainer.classList.add('gifContainer')
-      divGifContainer.innerHTML=`
-      <img class="mudiGif" src="https://mudi.com.co/Assets/gifMudi.gif">`;
-    
-      
-      //fatherGifContainer.insertBefore(divGifContainer, brotherMudi)
-    },5000)
 
+      if (fatherGifContainer){
+        fatherGifContainer.firstChild.remove();
+    
+        const brotherMudi  = fatherGifContainer.firstChild;
+      
+        const 
+        divGifContainer = document.createElement('DIV')
+        divGifContainer.classList.add('gifContainer')
+        divGifContainer.innerHTML=`
+        <img class="mudiGif" src="https://mudi.com.co/Assets/gifMudi.gif">`;
+
+        //fatherGifContainer.insertBefore(divGifContainer, brotherMudi)
+      }
+      
+    },5000)
 
   };
  
