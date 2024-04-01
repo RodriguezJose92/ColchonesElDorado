@@ -278,9 +278,11 @@ async function serverData({
     zIndexModal: 10000000000,
   }); 
 
+
+
 let 
-flagRecognize = false,
-flagLoop      = false;
+flagRecognizeMudi = false,
+flagLoop          = false;
 
 function recognizeInput(){
 
@@ -288,7 +290,7 @@ function recognizeInput(){
 
     let element = document.body.querySelector("[name='product-summary-sku-selector']");
   
-    !flagRecognize && element !== null && (
+    !flagRecognizeMudi && element !== null && (
       
     element.addEventListener('input',()=>{
 
