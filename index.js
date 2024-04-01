@@ -286,19 +286,42 @@ async function serverData({
     zIndexModal: 10000000000,
   }); 
 
-document.body.querySelector("[name='product-summary-sku-selector']").addEventListener('input',(e)=>{
+let 
+flagRecognize = false,
+flagLoop      = false;
 
-  setTimeout(()=>{
-    MudiExperience({
-      tokenApi: 'YeUtus8tzSGikyhV9pok',
-      skuNumber: new URLSearchParams(window.location.search).get('skuId'),
-      idCompanyMudi: 403,
-      color: '#78bed5',
-      containerBtns: document.querySelector('.swiper-container'),
-      zIndexModal: 10000000000,
-    }); 
-  },100);
+function recognizeInput(){
+
+  if( !flagLoop){
+
+    let element = document.body.querySelector("[name='product-summary-sku-selector']");
   
-});
+    !flagRecognize && element !== null && (
+      
+    element.addEventListener('input',()=>{
+
+        setTimeout(()=>{
+          MudiExperience({
+            tokenApi: 'YeUtus8tzSGikyhV9pok',
+            skuNumber: new URLSearchParams(window.location.search).get('skuId'),
+            idCompanyMudi: 403,
+            color: '#78bed5',
+            containerBtns: document.querySelector('.swiper-container'),
+            zIndexModal: 10000000000,
+          }); 
+        },100);
+      
+      })
+    
+    ),
+
+    flagLoop = true;
+
+  };
+
+  requestAnimationFrame(recognizeInput);
+
+};
+
 
 
