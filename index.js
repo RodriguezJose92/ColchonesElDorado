@@ -281,7 +281,7 @@ async function serverData({
 
 
 let 
-flagRecognizeMudi = false,
+mudi_mudi = false,
 flagLoop          = false;
 
 function recognizeInput(){
@@ -290,7 +290,7 @@ function recognizeInput(){
 
     let element = document.body.querySelector("[name='product-summary-sku-selector']");
   
-    !flagRecognizeMudi && element !== null && (
+    !mudi_mudi && element !== null && (
       
     element.addEventListener('input',()=>{
 
