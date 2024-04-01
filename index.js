@@ -1,4 +1,4 @@
-let flagDataSend = false;
+
 
 /* Petición SeverMudi */
 async function serverData({
