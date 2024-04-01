@@ -1,3 +1,5 @@
+let flagDataSend = false;
+
 /* Petición SeverMudi */
 async function serverData({
     token = undefined,
@@ -43,10 +45,6 @@ async function serverData({
   
   /** Cuando se obtiene una respuesta positiva del server se crean dos botones ( btn3D y btnAR ) */
   function createBtns({ father, sku, idCompany, link3D, color, zBtns, zModal, ButtonsY }) {
-
-    if( !document.body.querySelector('#containerBtnsMudi')){ 
-      document.body.querySelector('#containerBtnsMudi').remove()
-    };
   
     // Creación del contenedor principal para los botones
     const containerPrincipalBtns = document.createElement('DIV');
@@ -183,14 +181,6 @@ async function serverData({
     else if (navigator.userAgent.includes('iPhone') || navigator.userAgent.includes('iPad')) OSdevice = "IOS";
     else OSdevice = 'DESK';
   
-    /** Evento de visualización */
-    dataLayer.push({
-      event: 'Evento de visualizacion Mudi',
-      valorMudi: 1,
-      sku: sku,
-      sistemaOperativo: OSdevice
-    });  
-  
     /** Evento de interación AR Mudi */
     document.getElementById('btnMudiAR').addEventListener('click', () => {
       dataLayer.push({
@@ -254,6 +244,15 @@ async function serverData({
     const server = await serverData({ token: tokenApi, sku: skuNumber });
     if (server == undefined) { console.warn(`El producto identificado con el SKU: "%c${skuNumber}%c" en Mudi 3D&AR Commerce, no tiene 3D ni AR`, 'color: red; font-weight: bold', 'color: black;'); return };
   
+    /** Evento de visualización */
+    dataLayer.push({
+      event: 'Evento de visualizacion Mudi',
+      valorMudi: 1,
+      sku: sku,
+      sistemaOperativo: OSdevice
+    });  
+
+
     /** Una vez tengamos la respuesta positiva creamos los estilos generales y los botones */
     createStyles({ idCompany: idCompanyMudi });
     createBtns({ father: containerBtns, sku: skuNumber, idCompany: idCompanyMudi, link3D: server.URL_WEB, color: color, zBtns: zIndexBtns, zModal: zIndexModal, ButtonsY: positionBtnsY });
