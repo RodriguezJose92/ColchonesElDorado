@@ -285,41 +285,41 @@ async function MudiExperience({
 
 };
 
+
 /** Reconocimiento de cambio en el input */
 function recognizeChangeInput(){
-  
-  setTimeout(()=>{
 
-    document.body.querySelector('[name="product-summary-sku-selector"]').addEventListener('input',()=>{
+  document.body.querySelector('[name="product-summary-sku-selector"]').addEventListener('input',()=>{
 
-      setTimeout(()=>{
-        MudiExperience({
-          tokenApi: 'YeUtus8tzSGikyhV9pok',
-          skuNumber: new URLSearchParams(window.location.search).get('skuId'),
-          idCompanyMudi: 403,
-          color: '#78bed5',
-          containerBtns: document.querySelector('.swiper-container'),
-          zIndexModal: 10000000000,
-        });       
-        console.log(new URLSearchParams(window.location.search).get('skuId') + "Mudi")
-      },100)
-      
-    });
-
-  },1500);
+    MudiExperience({
+      tokenApi: 'YeUtus8tzSGikyhV9pok',
+      skuNumber: new URLSearchParams(window.location.search).get('skuId'),
+      idCompanyMudi: 403,
+      color: '#78bed5',
+      containerBtns: document.querySelector('.swiper-container'),
+      zIndexModal: 10000000000,
+    });       
+    
+  });
 
 };
 
 /** Ejecución de funciones */
-recognizeChangeInput();
+setTimeout(()=>{
+  recognizeChangeInput();
+},2000)
 
-MudiExperience({
-  tokenApi: 'YeUtus8tzSGikyhV9pok',
-  skuNumber: new URLSearchParams(window.location.search).get('skuId'),
-  idCompanyMudi: 403,
-  color: '#78bed5',
-  containerBtns: document.querySelector('.swiper-container'),
-  zIndexModal: 10000000000,
-}); 
+
+setTimeout(()=>{
+  MudiExperience({
+    tokenApi: 'YeUtus8tzSGikyhV9pok',
+    skuNumber: new URLSearchParams(window.location.search).get('skuId'),
+    idCompanyMudi: 403,
+    color: '#78bed5',
+    containerBtns: document.querySelector('.swiper-container'),
+    zIndexModal: 10000000000,
+  }); 
+},2000)
+
 
 
