@@ -182,14 +182,6 @@ function sendDataLayer({ sku }) {
   else if (navigator.userAgent.includes('iPhone') || navigator.userAgent.includes('iPad')) OSdevice = "IOS";
   else OSdevice = 'DESK';
 
-  /** Evento de visualización */
-  dataLayer.push({
-    event: 'Evento de visualizacion Mudi',
-    valorMudi: 1,
-    sku: sku,
-    sistemaOperativo: OSdevice
-  });  
-
   /** Evento de interación AR Mudi */
   document.getElementById('btnMudiAR').addEventListener('click', () => {
     dataLayer.push({
@@ -236,6 +228,22 @@ function sendDataLayer({ sku }) {
 
 };
 
+function sendViewEvent({sku}){
+  let OSdevice;
+
+  if (navigator.userAgent.includes('Android')) OSdevice = 'Android';
+  else if (navigator.userAgent.includes('iPhone') || navigator.userAgent.includes('iPad')) OSdevice = "IOS";
+  else OSdevice = 'DESK';
+
+  /** Evento de visualización */
+  dataLayer.push({
+    event: 'Evento de visualizacion Mudi',
+    valorMudi: 1,
+    sku: sku,
+    sistemaOperativo: OSdevice
+  });  
+}
+
 // Función Main Mudi --
 async function MudiExperience({
   tokenApi,
@@ -257,6 +265,7 @@ async function MudiExperience({
   createStyles({ idCompany: idCompanyMudi });
   createBtns({ father: containerBtns, sku: skuNumber, idCompany: idCompanyMudi, link3D: server.URL_WEB, color: color, zBtns: zIndexBtns, zModal: zIndexModal, ButtonsY: positionBtnsY });
   sendDataLayer({ sku: skuNumber });
+  sendViewEvent({ sku: skuNumber });
   
   setTimeout(()=>{
     const fatherGifContainer = document.querySelector('.contenidoHtml');
@@ -271,9 +280,8 @@ async function MudiExperience({
     <img class="mudiGif" src="https://mudi.com.co/Assets/gifMudi.gif">`;
   
     
-  fatherGifContainer.insertBefore(divGifContainer, brotherMudi)
+    //fatherGifContainer.insertBefore(divGifContainer, brotherMudi)
   },5000)
-
 
 };
 
