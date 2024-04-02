@@ -302,7 +302,7 @@ function recognizeChangeInput(){
           zIndexModal: 10000000000,
         });       
         console.log(new URLSearchParams(window.location.search).get('skuId') + "Mudi")
-      },1000)
+      },100)
       
     });
 
