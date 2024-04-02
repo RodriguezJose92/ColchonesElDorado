@@ -28,7 +28,10 @@ async function serverData({
 };
 
 /** Creamos Los estilos remotos */
-function createStyles({ idCompany }) {
+function createStyles() {
+
+  if(document.body.querySelector('#stylesMudiGeneral')){ return };
+
   const link = document.createElement('LINK');
   link.setAttribute('rel', 'stylesheet');
   link.id = "stylesMudiGeneral";
@@ -39,6 +42,10 @@ function createStyles({ idCompany }) {
 
 /** Cuando se obtiene una respuesta positiva del server se crean dos botones ( btn3D y btnAR ) */
 function createBtns({ father, sku, idCompany, link3D, color, zBtns, zModal, ButtonsY }) {
+
+  if( document.body.querySelector('#containerBtnsMudi')){
+    document.body.querySelector('#containerBtnsMudi').remove();
+  }
 
   // Creación del contenedor principal para los botones
   const containerPrincipalBtns = document.createElement('DIV');
@@ -270,7 +277,33 @@ async function MudiExperience({
 
 };
 
+/** Reconocimiento de cambio en el input */
 
+let flagMudirecognize = false
+function recognizeChangeInput(){
+  
+  if(document.body.querySelector('[name="product-summary-sku-selector"]')){
+
+    flagMudirecognize = true;
+
+    document.body.querySelector('[name="product-summary-sku-selector"]').addEventListener('input',()=>{
+      MudiExperience({
+        tokenApi: 'YeUtus8tzSGikyhV9pok',
+        skuNumber: new URLSearchParams(window.location.search).get('skuId'),
+        idCompanyMudi: 403,
+        color: '#78bed5',
+        containerBtns: document.querySelector('.swiper-container'),
+        zIndexModal: 10000000000,
+      });       
+    });
+
+  };
+
+  !flagMudirecognize && requestAnimationFrame(recognizeChangeInput)
+};
+
+/** Ejecución de funciones */
+recognizeChangeInput();
 
 MudiExperience({
   tokenApi: 'YeUtus8tzSGikyhV9pok',
@@ -280,3 +313,5 @@ MudiExperience({
   containerBtns: document.querySelector('.swiper-container'),
   zIndexModal: 10000000000,
 }); 
+
+
