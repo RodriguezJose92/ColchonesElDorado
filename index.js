@@ -258,21 +258,9 @@ async function MudiExperience({
   positionBtnsY = 'bottom',
 }) {
 
+  let flagControl = true
   const server = await serverData({ token: tokenApi, sku: skuNumber });
   if (server == undefined) { console.warn(`El producto identificado con el SKU: "%c${skuNumber}%c" en Mudi 3D&AR Commerce, no tiene 3D ni AR`, 'color: red; font-weight: bold', 'color: black;'); return };
-
-  if(!containerBtns){ requestAnimationFrame( 
-
-    MudiExperience({
-      tokenApi: 'YeUtus8tzSGikyhV9pok',
-      skuNumber: new URLSearchParams(window.location.search).get('skuId'),
-      idCompanyMudi: 403,
-      color: '#78bed5',
-      containerBtns: document.querySelector('.swiper-container'),
-      zIndexModal: 10000000000,
-    })
-
-  ) ;  return}
 
   /** Una vez tengamos la respuesta positiva creamos los estilos generales y los botones */
   createStyles({ idCompany: idCompanyMudi });
@@ -294,7 +282,7 @@ async function MudiExperience({
   
     
     //fatherGifContainer.insertBefore(divGifContainer, brotherMudi)
-  },5000)
+  },5000);
 
 };
 
@@ -303,12 +291,8 @@ async function MudiExperience({
 function recognizeChangeInput(){
 
   /** verificación */
-  if( !document.body.querySelector('[name="product-summary-sku-selector"]') ) {
-    requestAnimationFrame(recognizeChangeInput);
-    return;
-  };
-
-  document.body.querySelector('[name="product-summary-sku-selector"]').addEventListener('input',()=>{
+  let component = document.body.querySelector('[name="product-summary-sku-selector"]')
+  component && document.body.querySelector('[name="product-summary-sku-selector"]').addEventListener('input',()=>{
 
     setTimeout(()=>{
       MudiExperience({
@@ -322,21 +306,28 @@ function recognizeChangeInput(){
     },200)
    
   });
-
+  !component && requestAnimationFrame(recognizeChangeInput);
+  
 };
 recognizeChangeInput();
 
+function experienceOn(){
 
+  let container =  document.querySelector('.swiper-container')
+  
+  container && MudiExperience({
+    tokenApi: 'YeUtus8tzSGikyhV9pok',
+    skuNumber: new URLSearchParams(window.location.search).get('skuId'),
+    idCompanyMudi: 403,
+    color: '#78bed5',
+    containerBtns: document.querySelector('.swiper-container'),
+    zIndexModal: 10000000000,
+  }); 
 
-MudiExperience({
-  tokenApi: 'YeUtus8tzSGikyhV9pok',
-  skuNumber: new URLSearchParams(window.location.search).get('skuId'),
-  idCompanyMudi: 403,
-  color: '#78bed5',
-  containerBtns: document.querySelector('.swiper-container'),
-  zIndexModal: 10000000000,
-}); 
+  !container && requestAnimationFrame( experienceOn)
 
+};
+experienceOn();
 
 
 
