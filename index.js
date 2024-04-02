@@ -261,6 +261,19 @@ async function MudiExperience({
   const server = await serverData({ token: tokenApi, sku: skuNumber });
   if (server == undefined) { console.warn(`El producto identificado con el SKU: "%c${skuNumber}%c" en Mudi 3D&AR Commerce, no tiene 3D ni AR`, 'color: red; font-weight: bold', 'color: black;'); return };
 
+  if(!containerBtns){ requestAnimationFrame( 
+
+    MudiExperience({
+      tokenApi: 'YeUtus8tzSGikyhV9pok',
+      skuNumber: new URLSearchParams(window.location.search).get('skuId'),
+      idCompanyMudi: 403,
+      color: '#78bed5',
+      containerBtns: document.querySelector('.swiper-container'),
+      zIndexModal: 10000000000,
+    })
+
+  ) ;  return}
+
   /** Una vez tengamos la respuesta positiva creamos los estilos generales y los botones */
   createStyles({ idCompany: idCompanyMudi });
   createBtns({ father: containerBtns, sku: skuNumber, idCompany: idCompanyMudi, link3D: server.URL_WEB, color: color, zBtns: zIndexBtns, zModal: zIndexModal, ButtonsY: positionBtnsY });
@@ -289,37 +302,41 @@ async function MudiExperience({
 /** Reconocimiento de cambio en el input */
 function recognizeChangeInput(){
 
+  /** verificación */
+  if( !document.body.querySelector('[name="product-summary-sku-selector"]') ) {
+    requestAnimationFrame(recognizeChangeInput);
+    return;
+  };
+
   document.body.querySelector('[name="product-summary-sku-selector"]').addEventListener('input',()=>{
 
-    MudiExperience({
-      tokenApi: 'YeUtus8tzSGikyhV9pok',
-      skuNumber: new URLSearchParams(window.location.search).get('skuId'),
-      idCompanyMudi: 403,
-      color: '#78bed5',
-      containerBtns: document.querySelector('.swiper-container'),
-      zIndexModal: 10000000000,
-    });       
-    
+    setTimeout(()=>{
+      MudiExperience({
+        tokenApi: 'YeUtus8tzSGikyhV9pok',
+        skuNumber: new URLSearchParams(window.location.search).get('skuId'),
+        idCompanyMudi: 403,
+        color: '#78bed5',
+        containerBtns: document.querySelector('.swiper-container'),
+        zIndexModal: 10000000000,
+      });       
+    },200)
+   
   });
 
 };
-
-/** Ejecución de funciones */
-setTimeout(()=>{
-  recognizeChangeInput();
-},2000)
+recognizeChangeInput();
 
 
-setTimeout(()=>{
-  MudiExperience({
-    tokenApi: 'YeUtus8tzSGikyhV9pok',
-    skuNumber: new URLSearchParams(window.location.search).get('skuId'),
-    idCompanyMudi: 403,
-    color: '#78bed5',
-    containerBtns: document.querySelector('.swiper-container'),
-    zIndexModal: 10000000000,
-  }); 
-},2000)
+
+MudiExperience({
+  tokenApi: 'YeUtus8tzSGikyhV9pok',
+  skuNumber: new URLSearchParams(window.location.search).get('skuId'),
+  idCompanyMudi: 403,
+  color: '#78bed5',
+  containerBtns: document.querySelector('.swiper-container'),
+  zIndexModal: 10000000000,
+}); 
+
 
 
 
