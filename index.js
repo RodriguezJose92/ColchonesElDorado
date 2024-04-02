@@ -278,13 +278,9 @@ async function MudiExperience({
 };
 
 /** Reconocimiento de cambio en el input */
-
-let flagMudirecognize = false
 function recognizeChangeInput(){
   
-  if(document.body.querySelector('[name="product-summary-sku-selector"]')){
-
-    flagMudirecognize = true;
+  setTimeout(()=>{
 
     document.body.querySelector('[name="product-summary-sku-selector"]').addEventListener('input',()=>{
       MudiExperience({
@@ -297,9 +293,8 @@ function recognizeChangeInput(){
       });       
     });
 
-  };
+  },1500);
 
-  !flagMudirecognize && requestAnimationFrame(recognizeChangeInput)
 };
 
 /** Ejecución de funciones */
