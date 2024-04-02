@@ -301,7 +301,7 @@ function recognizeChangeInput(){
           containerBtns: document.querySelector('.swiper-container'),
           zIndexModal: 10000000000,
         });       
-        console.log(new URLSearchParams(window.location.search).get('skuId'))
+        console.log(new URLSearchParams(window.location.search).get('skuId') + "Mudi")
       },1000)
       
     });
