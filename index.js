@@ -268,7 +268,7 @@ async function MudiExperience({
   sendDataLayer({ sku: skuNumber });
   sendViewEvent({ sku: skuNumber });
   
-  setTimeout(()=>{
+  /**setTimeout(()=>{
     const fatherGifContainer = document.querySelector('.contenidoHtml');
     fatherGifContainer.firstChild.remove();
   
@@ -281,8 +281,8 @@ async function MudiExperience({
     <img class="mudiGif" src="https://mudi.com.co/Assets/gifMudi.gif">`;
   
     
-    //fatherGifContainer.insertBefore(divGifContainer, brotherMudi)
-  },5000);
+    fatherGifContainer.insertBefore(divGifContainer, brotherMudi)
+  },5000);*/
 
 };
 
