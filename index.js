@@ -307,7 +307,8 @@ function recognizeChangeInput(){
   !component && requestAnimationFrame(recognizeChangeInput);
   
 };
-recognizeChangeInput();
+setTimeout(()=>{recognizeChangeInput()},2000)
+
 
 function experienceOn(){
 
