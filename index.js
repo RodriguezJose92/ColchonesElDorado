@@ -279,7 +279,7 @@ async function MudiExperience({
     <img class="mudiGif" src="https://mudi.com.co/Assets/gifMudi.gif">`;
   
   
-    fatherGifContainer.insertBefore(divGifContainer, brotherMudi)
+    fatherGifContainer.appendchild(divGifContainer);
 
 
 };
