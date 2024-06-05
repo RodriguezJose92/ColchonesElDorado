@@ -268,21 +268,19 @@ async function MudiExperience({
   sendDataLayer({ sku: skuNumber });
   sendViewEvent({ sku: skuNumber });
   
-  /**setTimeout(()=>{
-    const fatherGifContainer = document.querySelector('.contenidoHtml');
-    fatherGifContainer.firstChild.remove();
-  
-    const brotherMudi  = fatherGifContainer.firstChild;
-  
+
+    const fatherGifContainer = document.querySelector('.mudi-box');  
+
     const 
     divGifContainer = document.createElement('DIV')
     divGifContainer.classList.add('gifContainer')
+    divGifContainer.addEventListener('click',()=>{ document.body.querySelector('#btnMudi3D').click() })
     divGifContainer.innerHTML=`
     <img class="mudiGif" src="https://mudi.com.co/Assets/gifMudi.gif">`;
   
-    
+  
     fatherGifContainer.insertBefore(divGifContainer, brotherMudi)
-  },5000);*/
+
 
 };
 
