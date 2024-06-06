@@ -276,12 +276,9 @@ async function MudiExperience({
     divGifContainer.classList.add('gifContainer')
     divGifContainer.addEventListener('click',()=>{ document.body.querySelector('#btnMudi3D').click() })
     divGifContainer.innerHTML=`
-    <img class="mudiGif" src="https://mudi.com.co/Assets/gifMudi.gif">`;
-  
+    <video src="https://mudi.com.co/Assets/colchonesDoradoBannerPDP.mp4" class="mudiGif" autoplay muted loop>`;
   
     fatherGifContainer.appendChild(divGifContainer);
-
-
 };
 
 
