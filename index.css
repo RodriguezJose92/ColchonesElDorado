@@ -903,6 +903,8 @@ iframe {
 
 .mudiGif {
     border-radius: 10px;
+    width: 95%;
+    cursor:pointer;
 }
 
 .colchoneseldorado-customproducto-xtg-0-x-flagCustomContainer-pdp {
