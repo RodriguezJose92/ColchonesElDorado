@@ -413,5 +413,30 @@ function experienceOn(){
 
 experienceOn();
 
+let urlActual = null;
+function verifyURL(){
+
+  if ( !urlActual ){
+    urlActual = window.location.href;
+  }
+
+  if( urlActual == window.location.href ){
+    requestAnimationFrame(verifyURL);
+    return;
+  }else{
+    console.log('cambiando de URL')
+    MudiExperience({
+      tokenApi: 'YeUtus8tzSGikyhV9pok',
+      skuNumber: new URLSearchParams(window.location.search).get('skuId'),
+      idCompanyMudi: 403,
+      color: '#78bed5',
+      containerBtns: document.querySelector('.swiper-container'),
+      zIndexModal: 10000000000,
+    }); 
+  }
+
+}
+verifyURL();
+
 
 
