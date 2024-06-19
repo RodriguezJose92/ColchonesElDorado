@@ -413,11 +413,13 @@ function experienceOn(){
 
 experienceOn();
 
-let urlActual = null;
+
 function verifyURL(){
 
+  let urlActual = localStorage.getItem('mudiHTTP');
+
   if ( !urlActual ){
-    urlActual = window.location.href;
+    localStorage.setItem('mudiHTTP' , window.location.href )
   }
 
   if( urlActual == window.location.href ){
@@ -433,6 +435,8 @@ function verifyURL(){
       containerBtns: document.querySelector('.swiper-container'),
       zIndexModal: 10000000000,
     }); 
+    localStorage.setItem('mudiHTTP' , window.location.href )
+    requestAnimationFrame(verifyURL);
   }
 
 }
