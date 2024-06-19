@@ -353,8 +353,15 @@ function printBanner3D(){
 
   /** Si ya esta creado */
   else{
-    document.body.querySelector('.gifContainer').removeEventListener('click' , callBack);
-    document.body.querySelector('.gifContainer').addEventListener('click', callBack)
+    document.body.querySelector('.gifContainer').remove();
+    const 
+    divGifContainer = document.createElement('DIV')
+    divGifContainer.classList.add('gifContainer')
+    divGifContainer.addEventListener('click', callBack)
+    divGifContainer.innerHTML=`
+    <video src="https://mudi.com.co/Assets/colchonesDoradoBannerPDP.mp4" class="mudiGif" autoplay muted loop>`;
+  
+    fatherGifContainer.appendChild(divGifContainer);
   }
 
 
