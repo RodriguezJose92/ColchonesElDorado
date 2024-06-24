@@ -324,7 +324,7 @@ function printBanner3D(){
       anim:"https://mudi.com.co/Componentes/animatedExperiences/?sku=48&id=403&test=true"
     },{
       pdp:"https://www.colchoneseldorado.com/colchones-colchon-crown-jewel-plush-496",
-      anim:"https://www.colchoneseldorado.com/colchones-colchon-crown-jewel-plush-496/p?skuId=81"
+      anim:"https://mudi.com.co/Componentes/animatedExperiences/?sku=80&id=403&test=true"
     }
 
   ];
