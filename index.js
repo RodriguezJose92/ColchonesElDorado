@@ -276,55 +276,72 @@ function printBanner3D(){
 
     {
       pdp:"https://www.colchoneseldorado.com/colchones-colchon-smart-vital-2322",
-      anim:"https://mudi.com.co/Componentes/animatedExperiences/?sku=13&id=403&test=true"
+      anim:"https://mudi.com.co/Componentes/animatedExperiences/?sku=13&id=403&test=true",
+      video:"https://mudi.com.co/Assets/bannersAnimadosColchonesDorado/gifs/smartVital/video.mp4"
     },{
       pdp:"https://www.colchoneseldorado.com/colchones-colchon-smart-comfort-2323",
-      anim:"https://mudi.com.co/Componentes/animatedExperiences/?sku=18&id=403&test=true"
+      anim:"https://mudi.com.co/Componentes/animatedExperiences/?sku=18&id=403&test=true",
+      video:"https://mudi.com.co/Assets/bannersAnimadosColchonesDorado/gifs/smartConfort/video.mp4"
     },{
       pdp:"https://www.colchoneseldorado.com/colchones-colchon-vital-sleep-2377",
-      anim:"https://mudi.com.co/Componentes/animatedExperiences/?sku=45&id=403&test=true"
+      anim:"https://mudi.com.co/Componentes/animatedExperiences/?sku=45&id=403&test=true",
+      video:"https://mudi.com.co/Assets/bannersAnimadosColchonesDorado/gifs/boston/video.mp4"
     },{
       pdp:"https://www.colchoneseldorado.com/colchon-boston-firm",
-      anim:"https://mudi.com.co/Componentes/animatedExperiences/?sku=2340&id=403&test=true"
+      anim:"https://mudi.com.co/Componentes/animatedExperiences/?sku=2340&id=403&test=true",
+      video:"https://mudi.com.co/Assets/bannersAnimadosColchonesDorado/gifs/boston/video.mp4"
     },{
       pdp:"https://www.colchoneseldorado.com/colchon-boston-medium",
-      anim:"https://mudi.com.co/Componentes/animatedExperiences/?sku=2347&id=403&test=true"
+      anim:"https://mudi.com.co/Componentes/animatedExperiences/?sku=2347&id=403&test=true",
+      video:"https://mudi.com.co/Assets/bannersAnimadosColchonesDorado/gifs/boston/video.mp4"
     },{
       pdp:"https://www.colchoneseldorado.com/colchon-supreme-nuevo/",
-      anim:"https://mudi.com.co/Componentes/animatedExperiences/?sku=2359&id=403&test=true"
+      anim:"https://mudi.com.co/Componentes/animatedExperiences/?sku=2359&id=403&test=true",
+      video:"https://mudi.com.co/Assets/bannersAnimadosColchonesDorado/gifs/suprime/video.mp4"
     },{
       pdp:"https://www.colchoneseldorado.com/colchones-colchon-somma-1244",
-      anim:"https://mudi.com.co/Componentes/animatedExperiences/?sku=23&id=403&test=true"
+      anim:"https://mudi.com.co/Componentes/animatedExperiences/?sku=23&id=403&test=true",
+      video:"https://mudi.com.co/Assets/bannersAnimadosColchonesDorado/gifs/soma/video.mp4"
     },{
       pdp:"https://www.colchoneseldorado.com/colchon-balance-power",
-      anim:"https://mudi.com.co/Componentes/animatedExperiences/?sku=28&id=403&test=true"
+      anim:"https://mudi.com.co/Componentes/animatedExperiences/?sku=28&id=403&test=true",
+      video:"https://mudi.com.co/Assets/bannersAnimadosColchonesDorado/gifs/balance/video.mp4"
     },{
       pdp:"https://www.colchoneseldorado.com/colchones-colchon-coolmax-power-481-copy-136-/p",
-      anim:"https://mudi.com.co/Componentes/animatedExperiences/?sku=33&id=403&test=true"
+      anim:"https://mudi.com.co/Componentes/animatedExperiences/?sku=33&id=403&test=true",
+      video:"https://mudi.com.co/Assets/bannersAnimadosColchonesDorado/gifs/coolmax/video.mp4"
     }, {
       pdp:"https://www.colchoneseldorado.com/colchones-colchon-coolmax-power-481/p",
-      anim:"https://mudi.com.co/Componentes/animatedExperiences/?sku=876&id=403&test=true"
+      anim:"https://mudi.com.co/Componentes/animatedExperiences/?sku=876&id=403&test=true",
+      video:"https://mudi.com.co/Assets/bannersAnimadosColchonesDorado/gifs/coolmax/video.mp4"
     },{
       pdp:"https://www.colchoneseldorado.com/colchon-sealy-premium-et-medium",
-      anim:"https://mudi.com.co/Componentes/animatedExperiences/?sku=517&id=403&test=true"
+      anim:"https://mudi.com.co/Componentes/animatedExperiences/?sku=517&id=403&test=true",
+      video:"https://mudi.com.co/Assets/bannersAnimadosColchonesDorado/gifs/newyork/video.mp4"
     },{
       pdp:"https://www.colchoneseldorado.com/colchon-sealy-premium-et-firm",
-      anim:"https://mudi.com.co/Componentes/animatedExperiences/?sku=522&id=403&test=true"
+      anim:"https://mudi.com.co/Componentes/animatedExperiences/?sku=522&id=403&test=true",
+      video:"https://mudi.com.co/Assets/bannersAnimadosColchonesDorado/gifs/newyork/video.mp4"
     },{
       pdp:"https://www.colchoneseldorado.com/colchones-colchon-sealy-new-york-medium-2258",
-      anim:"https://mudi.com.co/Componentes/animatedExperiences/?sku=56&id=403&test=true"
+      anim:"https://mudi.com.co/Componentes/animatedExperiences/?sku=56&id=403&test=true",
+      video:"https://mudi.com.co/Assets/bannersAnimadosColchonesDorado/gifs/newyork/video.mp4"
     },{
       pdp:"https://www.colchoneseldorado.com/colchones-colchon-sealy-new-york-firm-2151",
-      anim:"https://mudi.com.co/Componentes/animatedExperiences/?sku=61&id=403&test=true"
+      anim:"https://mudi.com.co/Componentes/animatedExperiences/?sku=61&id=403&test=true",
+      video:"https://mudi.com.co/Assets/bannersAnimadosColchonesDorado/gifs/newyork/video.mp4"
     },{
       pdp:"https://www.colchoneseldorado.com/colchones-colchon-sealy-new-york-ultra-firm-2160",
-      anim:"https://mudi.com.co/Componentes/animatedExperiences/?sku=66&id=403&test=true"
+      anim:"https://mudi.com.co/Componentes/animatedExperiences/?sku=66&id=403&test=true",
+      video:"https://mudi.com.co/Assets/bannersAnimadosColchonesDorado/gifs/newyork/video.mp4"
     },{
       pdp:"https://www.colchoneseldorado.com/colchones-colchon-crown-jewel-firm-1458",
-      anim:"https://mudi.com.co/Componentes/animatedExperiences/?sku=48&id=403&test=true"
+      anim:"https://mudi.com.co/Componentes/animatedExperiences/?sku=48&id=403&test=true",
+      video:"https://mudi.com.co/Assets/bannersAnimadosColchonesDorado/gifs/jewel/video.mp4"
     },{
       pdp:"https://www.colchoneseldorado.com/colchones-colchon-crown-jewel-plush-496",
-      anim:"https://mudi.com.co/Componentes/animatedExperiences/?sku=80&id=403&test=true"
+      anim:"https://mudi.com.co/Componentes/animatedExperiences/?sku=80&id=403&test=true",
+      video:"https://mudi.com.co/Assets/bannersAnimadosColchonesDorado/gifs/jewel/video.mp4"
     }
 
   ];
@@ -346,7 +363,7 @@ function printBanner3D(){
       divGifContainer.classList.add('gifContainer')
       divGifContainer.addEventListener('click', callBack)
       divGifContainer.innerHTML=`
-      <video src="https://mudi.com.co/Assets/colchonesDoradoBannerPDP.mp4" class="mudiGif" autoplay muted loop>`;
+      <video src="${match.video}" class="mudiGif" autoplay muted loop>`;
     
       fatherGifContainer.appendChild(divGifContainer);
   }
@@ -359,7 +376,7 @@ function printBanner3D(){
     divGifContainer.classList.add('gifContainer')
     divGifContainer.addEventListener('click', callBack)
     divGifContainer.innerHTML=`
-    <video src="https://mudi.com.co/Assets/colchonesDoradoBannerPDP.mp4" class="mudiGif" autoplay muted loop>`;
+    <video src="${match.video}" class="mudiGif" autoplay muted loop>`;
   
     fatherGifContainer.appendChild(divGifContainer);
   }
