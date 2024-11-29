@@ -259,7 +259,7 @@ async function MudiExperience({
 }) {
 
   const server = await serverData({ token: tokenApi, sku: skuNumber });
-  if (server == undefined) { console.warn(`El producto identificado con el SKU: "%c${skuNumber}%c" en Mudi 3D&AR Commerce, no tiene 3D ni AR`, 'color: red; font-weight: bold', 'color: black;'); return };
+  if (server == undefined) { return };
 
   /** Una vez tengamos la respuesta positiva creamos los estilos generales y los botones */
   createStyles({ idCompany: idCompanyMudi });
